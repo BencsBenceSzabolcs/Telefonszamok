@@ -135,7 +135,15 @@ namespace Telefonszamok
                 }
                 else if (valasztas == "7")
                 {
-                    //7
+                    //06-al kezdődik
+                    Console.Clear();
+                    foreach (String telszam in telefonszamok)
+                    {
+                        if (telszam.StartsWith("06"))
+                        {
+                            Console.WriteLine(telszam);
+                        }
+                    }
                 }
                 else if (valasztas == "8")
                 {
