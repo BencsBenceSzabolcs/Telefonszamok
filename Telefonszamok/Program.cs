@@ -98,8 +98,16 @@ namespace Telefonszamok
 
                 }
                 else if (valasztas == "5")
-                {
-                    //5
+                {   
+                    //Csak azok a jelenjenek meg amiben 6-os szám van
+                    Console.Clear();
+                    foreach (String telszam in telefonszamok)
+                    {
+                        if (telszam.Contains('6'))
+                        {
+                            Console.WriteLine(telszam);
+                        }
+                    }
                 }
                 else if (valasztas == "6")
                 {
