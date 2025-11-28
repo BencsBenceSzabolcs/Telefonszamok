@@ -147,7 +147,15 @@ namespace Telefonszamok
                 }
                 else if (valasztas == "8")
                 {
-                    //8
+                    //( és vagy ) jel van benne
+                    Console.Clear();
+                    foreach (String telszam in telefonszamok)
+                    {
+                        if (telszam.Contains('(') || telszam.Contains(')'))
+                        {
+                            Console.WriteLine(telszam);
+                        }
+                    }
                 }
                 else
                 {
