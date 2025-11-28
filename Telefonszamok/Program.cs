@@ -66,7 +66,15 @@ namespace Telefonszamok
                 }
                 else if (valasztas == "3")
                 {
-                    //3
+                    //Csak a 12 hosszúak
+                    Console.Clear();
+                    foreach (String telszam in telefonszamok)
+                    {
+                        if (telszam.Length == 12)
+                        {
+                            Console.WriteLine(telszam);
+                        }
+                    }
                 }
                 else if (valasztas == "4")
                 {
