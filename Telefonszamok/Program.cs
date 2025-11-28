@@ -111,7 +111,27 @@ namespace Telefonszamok
                 }
                 else if (valasztas == "6")
                 {
-                    //6
+                    //Csak számok és + jel, de csak elől lehet a + jel
+                    Console.Clear();
+                    foreach (String telszam in telefonszamok)
+                    {
+                        bool jo = true;
+                        for (int i = 0; i < telszam.Length; i++)
+                        {
+                            if (i == 0)
+                            {
+                                if (!char.IsNumber(telszam[0]) && telszam[i] != '+')
+                                    jo = false;
+                            }
+                            else
+                            {
+                                if (!char.IsNumber(telszam[i]))
+                                    jo = false;
+                            }
+                        }
+                        if (jo)
+                            Console.WriteLine(telszam);
+                    }
                 }
                 else if (valasztas == "7")
                 {
