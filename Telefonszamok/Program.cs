@@ -36,11 +36,33 @@ namespace Telefonszamok
                 }
                 else if (valasztas == "1")
                 {
-                    //1
+                    //Mindent megjelenít
+                    Console.Clear();
+                    foreach (String telszam in telefonszamok)
+                    {
+                        Console.WriteLine(telszam);
+                    }
                 }
                 else if (valasztas == "2")
                 {
-                    //2
+                    //Csak a számjegyeket tartalmazók
+                    Console.Clear();
+                    foreach (String telszam in telefonszamok)
+                    {
+                        bool csakSzamjegy = true;
+                        foreach (char karakter in telszam)
+                        {
+                            if (!char.IsNumber(karakter))
+                            {
+                                csakSzamjegy = false;
+                                break;
+                            }
+                        }
+                        if (csakSzamjegy)
+                        {
+                            Console.WriteLine(telszam);
+                        }
+                    }
                 }
                 else if (valasztas == "3")
                 {
@@ -70,8 +92,9 @@ namespace Telefonszamok
                 {
                     Console.WriteLine("Nincs ilyen opció!");
                 }
+
+                Console.ReadKey();
             }
-            Console.ReadKey();
         }
     }
 }
