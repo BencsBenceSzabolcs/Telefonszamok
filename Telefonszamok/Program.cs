@@ -78,7 +78,24 @@ namespace Telefonszamok
                 }
                 else if (valasztas == "4")
                 {
-                    //4
+                    //Csak számjegyeket és + jelet tartalmazhat
+                    Console.Clear();
+                    foreach (String telszam in telefonszamok)
+                    {
+                        bool jo = true;
+                        foreach (char karakter in telszam)
+                        {
+                            if (!char.IsNumber(karakter) && karakter != '+')
+                            {
+                                jo = false;
+                            }
+                        }
+                        if (jo)
+                        {
+                            Console.WriteLine(telszam);
+                        }
+                    }
+
                 }
                 else if (valasztas == "5")
                 {
